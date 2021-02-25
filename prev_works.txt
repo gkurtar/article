@@ -1,0 +1,206 @@
+Öneriler
+Design and Calibration of a Multi-view TOF Sensor Fusion System
+
+Bolum 4.1 In practice, we can discard these unreliable
+measurements from recorded data by enforcing a
+depth difference threshold around depth discontinuities.
+
+Previous Works
+
+TOF Sensor Calibraiton for a Color and Depth Camera Pair makalesinde 2.5 D Pattern Board kullanılmış ve ray correction ve range bias correction uygulanmıştır. Range Error lar clusterlar la ifade edilip B spline ile hatalar gösterilmiştir. 
+Bu makalede kullanılan bir tool su adrestedir: http://george-vogiatzis.org/calib/
+Makale için yazılan yazılımlar ise sites.google.com/site/jyjungcv adresindedir
+
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+3D measurements from imaging laser radars: how good are they?
+LIDAR lar ile ilgili 1992 model bir çalışma.Ölçüm modelleri için “range ve intensity” bir karmaşık sayı olarak modellenmiş.  Problem sebeplerinden birisi de mixed piksel effect denmiş ve muhtemel çözümlerden biri ise median filter uygulamak olduğu belirtilmiş.
+
+-----------------------------------------------------------------------------------------------------
+New Insights into the Calibration of ToF-Sensors
+PMD lerden bahsedilmiş..
+
+For instance, the measured distance of a PMD
+is affected by a systematic error [2, 5], the integration time
+and the amount of incident active light [6].
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+Cross-Calibration of Time-of-flight and Colour Cameras
+Miles Hansard, Georgios Evangelidis, Quentin Pelorson, Radu Horaud
+
+This paper presents a geometric framework for the resulting
+multi-view and multi-modal calibration problem. It is shown that
+three-dimensional projective transformations can be used to align depth and
+parallax-based representations of the scene, with or without Euclidean reconstruction.
+A new evaluation procedure is also developed; this allows the
+reprojection error to be decomposed into calibration and sensor-dependent
+components. The complete approach is demonstrated on a network of three
+time-of-flight and six colour cameras.
+
+-----------------------------------------------------------------------------------------------------
+Distance errors correction for the Time of Flight (ToF) Cameras.
+
+Abstract--One of the most important distance measurement errors is produced by light reflections. These errors can’t be avoided and black are more affected than white objects.
+The measured distance by the ToF camera to an object in the scene changes if surrounding objects are moved. The distance error can be greater than 50% and camera calibration is useless if objects are moved. The calibration method we propose can be performed in any conditions not only in the laboratory. The distance errors for all objects in the scene can be corrected if on the objects are attached white or black tags/ labels. The ToF cameras can be improved using an active illumination with structured light. The improvement will eliminate the distance errors produced by light reflections.
+
+Burada etraftan yansıyan ışıkların etkisini azaltmak için kontrast ozellikli komsu pikseller arasında karşılaştırma yapılmış.
+
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+Makale 32
+Fusion of Time of Flight Camera Point Clouds
+
+Bu makalede bundle adjustment ve ransac kullanılarak extrinsic parametreler bununuyor ve nokta bulutları arasındaki ilişkiler bulunuyor.
+
+In this paper, we investigate fusion methods for partially overlapping range images, aiming to address the issues of lateral
+field of view extension (by combining depth images with parallel view axes) and occlusion removal (by imaging the same scene from different viewpoints).
+
+In this section, we consider the problem of aligning two point clouds P0 and P1 acquired by TOF devices C0 and C1, in the specific case where the two fields of view overlap partially. More specifically, the alignment procedure should allow to obtain the rigid body transformation TC0;C1 between the point of view of cameras C0 and C1. This
+rigid body transformation can be decomposed in a rotationRand a translation T, and is therefore fully specified by 6 parameters : the three translation coefficients in T, and the rotation angles _ (yaw), _ (pitch) and   (tilt). If those parameters are known, it becomes possible, for each point x1 in the cloud P1, to compute the corresponding position x0 in the coordinates system of C0
+
+
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 34
+
+Projective Alignment of Range and Parallax Data
+
+3D reconstruction ile range data ilişkilendirilmiş. Karışık, çok formüllü.
+
+An approximately Euclidean representation of the visible scene can be obtained directly from a range, or ‘time-offlight’, camera. An uncalibrated binocular system, in contrast, gives only a projective reconstruction of the scene. This paper analyzes the geometric mapping between the two representations, without requiring an intermediate calibration of the binocular system. The mapping can be found by either of two new methods, one of which requires pointcorrespondences between the range and colour cameras, and one of which does not. It is shown that these methods can be used to reproject the range data into the binocular images, which makes it possible to associate highresolution colour and texture with each point in the Euclidean representation.
+
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 41
+
+
+CALIBRATION OF A PMD-CAMERA USING A PLANAR CALIBRATION PATTERN
+TOGETHER WITH A MULTI-CAMERA SETUP
+
+3 rgb bir pmd kullanarak opencv ile kalibrasyon yapılmış, sentezlenmiş görüntüler ile normal görüntüler karşılaştırılmış. Bulunan parametrelerin birbirleri ile ilgili korelasyonları incelenmiş.
+
+We discuss the joint calibration of novel 3D range cameras based on the time-of-flight principle with the Photonic Mixing Device (PMD) and standard 2D CCD cameras. Due to the small field-of-view (fov) and low pixel resolution, PMD-cameras are difficult to calibrate with traditional calibration methods. In addition, the 3D range data contains systematic errors that need to be compensated. Therefore, a calibration method is developed that can estimate full intrinsic calibration of the PMD-camera including optical lens distortions and systematic range errors, and is able to calibrate the external orientation together with multiple 2D cameras that are rigidly coupled to the PMD-camera. The calibration approach is based on a planar checkerboard pattern as calibration reference, viewed from multiple angles and distances. By combining the PMD-camera with standard CCD-cameras the internal camera parameters can be estimated more precisely and the limitations of the small fov can be overcome. Furthermore we use the additional cameras to calibrate the systematic depth measurement error of the PMD-camera. We show that the correlation between rotation and translation estimation is
+significantly reduced with our method.
+
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 44
+
+Fusion of Stereo Vision and Time-of-Flight Imaging for Improved 3D Estimation
+
+
+Disparity’ler kullanılarak 3d fusion yapılmış.
+
+In this paper the fusion of two 3D estimation techniques is suggested: Stereo vision and Time-of-Flight (TOF) imaging. By converting the TOF-depth measurements to stereo disparities the correspondence between images from a fast TOF-camera and standard high resolution camera pair are found so the TOF depth measurements can be linked to the image pairs. Also in the same framework a method is developed to initialize and constrain a hierarchical stereo matching algorithm. It is shown that in this way higher spatial resolution is obtained than by only using the TOF camera and higher quality dense stereo disparity maps are the results of this sensor fusion.
+
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 45
+
+Fusion of Stereo-Camera and PMD-Camera Data for Real-
+Time Suited Precise 3D Environment Reconstruction
+
+İki kamera ve depth sensorlu sistem. Önce hepsi ayrı ayrı kalibre edilmiş sonra da füzyon yapılmış. TOF calibration yapılırken phase value farklı uzaklıklar icin bulunarak kestirilmiş.
+
+Abstract - 3D environment reconstruction is a basic task, delivering the data for mapping, localization and navigation in mobile robotics. We present a new technique that combines a
+stereo-camera system with a PMD-camera. Both systems generate distance images of the environment but with different characteristics. It is shown that each system compensates
+effectively for the deficiencies of the other one. The combined system is real-time suited. Experimental data of an indoor scene including the calibration procedure are reported.
+
+
+
+
+
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 47
+
+A Combined Approach for Estimating Patchlets from PMD Depth Images and Stereo Intensity Images
+
+Fazla formül, az detay var.
+
+Abstract. Real-time active 3D range cameras based on time-of-flight technology using the Photonic Mixer Device (PMD) can be considered as a complementary technique for stereo-vision based depth estimation. Since those systems directly yield 3D measurements, they can also be used for initializing vision based approaches, especially in highly dynamic environments. Fusion of PMD depth images with passive intensity-based stereo is a promising approach for obtaining reliable surface reconstructions even in weakly textured surface regions. In this work a PMD-stereo fusion algorithm for the estimation of patchlets from a combined PMD-stereo camera rig will be presented. As patchlet we define an oriented small planar 3d patch with associated surface normal. Least-squares estimation schemes for estimating patchlets from PMD range images as well as from a pair of stereo images are derived. It is shown, how those two approaches can be fused into one single estimation,
+that yields results even if either of the two single approaches fails.
+
+The phase difference is measured by cross correlation between the sent and
+received modulated signal by the PMD chip. Since the resolution of the phase
+difference measurement is independent from distance, the achievable depth resolution
+is independent from scene depth. This is in contrast to stereo triangulation
+where depth accuracy is proportional to inverse depth.
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 48
+
+
+NON-PARAMETRIC DEPTH CALIBRATION OF A TOF CAMERA
+
+
+Fonksiyonel bir yaklaşım, güzel, makalede kullanılabilir.
+
+Time-of-Flight (TOF) cameras measure, in real-time, the distance between the camera and objects in the scene. This opens new perspectives in different application fields: 3D reconstruction, Augmented Reality, video-surveillance, etc. However, like any sensor, TOF cameras have limitations related to their technology. One of them is distance distortion. In this paper, we present a new depth calibration method (estimation of distance distortion) for TOF cameras. Our approach has several advantages. First, it is based on a non-parametric model, contrary to most of the other methods. Second, it models under the same formalism the distortion variation  according to the distance and the pixel position in the image. This improves calibration accuracy even at the image boundaries which are typically more distorted than the image center. A comparison with two state of the art parametric methods is presented.
+
+ 
+---------------------------------------------
+--------------------------------------------
+
+Makale 55
+
+A Novel 2.5D Pattern for Extrinsic Calibration of ToF and Camera
+Fusion System
+
+Recently, many researchers have made efforts for accurate calibration of a Time-of-Flight camera to fully utilize
+its provided depth values. Yet most previous works focus mainly on intrinsic calibration by modeling its systematic errors and noises while extrinsic calibration is also an important factor when constructing sensor fusion system. In this paper, we
+present a calibration process that can correctly transfer the depth measurements onto the color image. We use 2.5D pattern
+so that sufficient reprojection error can be considered for both color and ToF cameras. The issues on obtaining the
+correct correspondences for this pattern are discussed. In the optimization stage, the depth constraint is also employed to
+ensure the depth measurements to lie on the pattern plane. The strengths of the proposed method over previous approaches are evaluated in several robotic applications which require precise ToF and camera calibration.
+
+
+The main reason that the traditional calibration methods
+do not work well on calibrating camera-ToF sensor fusion
+system is the characteristics of the ToF sensor. Unlike a 2D
+laser range finder, the depth measurement that a typical 3D
+ToF camera provides is inaccurate, and the amplitude images
+
+
+*********************************************************************
+
+•	Azure Kinect devices are calibrated with Brown Conrady which is compatible with OpenCV.
+
+********************************
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 37
+
+Revisiting Uncertainty Analysis for Optimum Planes Extracted from 3D Range Sensor Point-Clouds
+
+Bol formüllü, plain detection konulu bir çalışma.
+
+
+Abstract—In this work, we utilize a recently studied more accurate range noise model for 3D sensors to derive from scratch the expressions
+for the optimum plane which best fits a point-cloud and for the combined covariance matrix of the plane’s parameters. The parameters in question are the plane’s normal and its distance to the origin. The range standarddeviation model used by us is a quadratic function of the true range and is  a function of the incidence angle as well. We show that for this model, the maximum-likelihood plane is biased, whereas the least-squares plane is not. The plane-parameters’ covariance matrix for the least-squares plane is shown to possess a number of desirable properties, e.g., the optimal solution forms its null-space and its components are functions of easily understood terms like the planar-patch’s center and scatter.We verify our covariance expression with that obtained by the eigenvector perturbation method. We further compare our method to that of renormalization with respect to the theoretically best covariance matrix in simulation. The application of our approach to real-time range-image registration and plane fusion is shown by an example using a commercially available 3D range sensor. Results show that our method has good accuracy, is fast to compute, and is easy to interpret intuitively.
+
+Index Terms—Plane-fitting, Plane uncertainty estimation, 3D Mapping, Plane
+
+GENERALIZATION of traditional occupancy-grid 2D maps to three dimensions is hindered by the disproportionate increase in storage and computation requirements.
+
+Given a set of noisy points known or hypothized to lie on a plane, the “optimum” plane can be extracted from them using methods surveyed in [9]. The main methods are that of least-squares [5], [9] and renormalization.
