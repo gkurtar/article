@@ -1,0 +1,18 @@
+
+Depth Camera Calibration: Probabilitistic Approach
+
+Abstract
+
+Depth Camera calibration would be achieved by a probabilistic approach.
+
+1.Introduction
+
+Azure Kinect DK would be used.
+
+2. Related Work
+
+3. Calibration
+
+4. Experiment
+
+5. Conclusion
