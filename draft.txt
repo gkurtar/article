@@ -5,14 +5,43 @@ Abstract
 
 Depth Camera calibration would be achieved by a probabilistic approach.
 
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
 1.Introduction
+----------------------------------------------------
 
 Azure Kinect DK would be used.
 
+The Azure Kinect DK depth camera implements the Amplitude Modulated Continuous Wave (AMCW) Time-of-Flight (ToF) principle. The camera casts modulated illumination in the near-IR (NIR) spectrum onto the scene. It then records an indirect measurement of the time it takes the light to travel from the camera to the scene and back.
+
+The Azure Kinect DK depth camera  uses Amplitude Modulated Continuous Wave (AMCW) Time-of-Flight (ToF) principle to detect depth information.
+
+
+
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
 2. Related Work
+----------------------------------------------------
 
+
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
 3. Calibration
+----------------------------------------------------
 
+
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
 4. Experiment
+----------------------------------------------------
 
+
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
 5. Conclusion
+----------------------------------------------------
