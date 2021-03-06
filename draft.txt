@@ -17,6 +17,10 @@ The Azure Kinect DK depth camera implements the Amplitude Modulated Continuous W
 
 The Azure Kinect DK depth camera  uses Amplitude Modulated Continuous Wave (AMCW) Time-of-Flight (ToF) principle to detect depth information.
 
+Diğer 3d teknikleri anlatılabilir. Shape from siluet, Stereo, Structured Light vs
+
+aktive sensor'e vurgu
+
 
 
 ----------------------------------------------------
@@ -25,13 +29,28 @@ The Azure Kinect DK depth camera  uses Amplitude Modulated Continuous Wave (AMCW
 2. Related Work
 ----------------------------------------------------
 
+random noise characteristic'lerle ilgili (1) nolu calisma yapılmıs
+
+
 
 ----------------------------------------------------
 ----------------------------------------------------
 ----------------------------------------------------
-3. Calibration
+3. Calibration &| System Architecture
 ----------------------------------------------------
 
+Depth Sensor Characteristics ten bahsedilebilir. CW Amp Mod vs.
+
+This measurement uncertainty comprises of two components, a random component dr(u, v) and a systematic bias ds(u, v). (2)
+
+3.1 Reandom Noise
+Yine 2 nolu makalede random noise ile ilgili önceki çalışmalar incelenmiş.
+
+Boyle birsey yapılabilir. "In practice, we can discard these unreliable measurements from recorded data by enforcing a depth difference threshold around depth discontinuities"
+
+3.2 Systematic BIAS
+The systematic measurement bias ds(u, v) leads to depth inaccuracies that are consistent over time. Our experiments show that the systematic measurement bias can be modeled by the following factors: Rigid misalignment R, ray-space misalignment D, a distance bias along the measurement ray B, and the subtle influence of orientation and translation that we can implicitly model as dependencies on ratios of normalized amplitudes.
+Bu bolum makale 2 de detaylı anlatılmış.
 
 ----------------------------------------------------
 ----------------------------------------------------
@@ -45,3 +64,8 @@ The Azure Kinect DK depth camera  uses Amplitude Modulated Continuous Wave (AMCW
 ----------------------------------------------------
 5. Conclusion
 ----------------------------------------------------
+
+kaynaklar
+1. Experimental Characterization of Commercial Flash Ladar Devices
+
+2. Design and Calibration of a Multi-view TOF Sensor Fusion System (Stanford)
