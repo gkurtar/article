@@ -30,6 +30,7 @@ aktive sensor'e vurgu
 ----------------------------------------------------
 
 random noise characteristic'lerle ilgili (1) nolu calisma yapılmıs
+(2) nolu makalede design and calibration of a multi view TOF sensor function system anlatılmış. Swiss ranger kullanılan bu makalede hatalar random ve systematic olarak ikiye ayrlmış ve systematic hatalar rigid transformation, ray space alignment ve distance correction ile düzeltilerek kompanse edilmiş. başarılı sonuçlar elde edilen bu projede kullanılan farklı depth sensorler ayrı frekansta çalıştırılarak intervention onlenmiş. 
 
 
 
@@ -57,6 +58,8 @@ Bu bolum makale 2 de detaylı anlatılmış.
 ----------------------------------------------------
 4. Experiment
 ----------------------------------------------------
+
+(2) nolu makaleden: Bolum 4.1 In practice, we can discard these unreliable measurements from recorded data by enforcing a depth difference threshold around depth discontinuities.
 
 
 ----------------------------------------------------
