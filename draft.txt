@@ -22,6 +22,11 @@ Diğer 3d teknikleri anlatılabilir. Shape from siluet, Stereo, Structured Light
 aktive sensor'e vurgu
 
 
+makale 3'ten:
+The manufacturers of ToF-cameras handle these problems with different calibration procedures. However, the used calibration methods are costly because the entire working range is taken into account although many users only run the camera within a limited working range. Current ToF-camera calibration approaches perform a linear mapping, assuming the
+error to be a fixed pattern noise or adjust range measurement errors by using look-up-tables or splines.
+
+
 
 ----------------------------------------------------
 ----------------------------------------------------
@@ -72,3 +77,5 @@ kaynaklar
 1. Experimental Characterization of Commercial Flash Ladar Devices
 
 2. Design and Calibration of a Multi-view TOF Sensor Fusion System (Stanford)
+
+3. Extrinsics and Depth Calibration of ToF cameras
