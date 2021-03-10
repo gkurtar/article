@@ -37,6 +37,8 @@ error to be a fixed pattern noise or adjust range measurement errors by using lo
 random noise characteristic'lerle ilgili (1) nolu calisma yapılmıs
 (2) nolu makalede design and calibration of a multi view TOF sensor function system anlatılmış. Swiss ranger kullanılan bu makalede hatalar random ve systematic olarak ikiye ayrlmış ve systematic hatalar rigid transformation, ray space alignment ve distance correction ile düzeltilerek kompanse edilmiş. başarılı sonuçlar elde edilen bu projede kullanılan farklı depth sensorler ayrı frekansta çalıştırılarak intervention onlenmiş. 
 
+makale 3'te soyle denmiş In this work a calibration process for ToF-cameras with respect to the intrinsic parameters, the depth measurement distortion and the pose of the camera relative to a robot’s endeffector is described. Bu makalede, distance and amplitude related error and latency related error are defined and depth calibration is achieved by estimating parameters of corresponding error models.
+
 
 
 ----------------------------------------------------
@@ -58,13 +60,23 @@ Boyle birsey yapılabilir. "In practice, we can discard these unreliable measure
 The systematic measurement bias ds(u, v) leads to depth inaccuracies that are consistent over time. Our experiments show that the systematic measurement bias can be modeled by the following factors: Rigid misalignment R, ray-space misalignment D, a distance bias along the measurement ray B, and the subtle influence of orientation and translation that we can implicitly model as dependencies on ratios of normalized amplitudes.
 Bu bolum makale 2 de detaylı anlatılmış.
 
+
+makale 3'ten error modelleri:
+
+Due to nonlinearities of the semiconductor and in account of imperfect separation properties a different number of incident photons at a constant distance causes different distance measurements. Furthermore, this amplitude-related error changes also with the distance. Within this work the distance- and amplitude-related errors are joined and approximated byM penalised splines (The number M depends on the amplitude grouping. Thereby, every single spline represents the distance-related error for an amplitude interval. 
+
+The phase-delay originates partially from latencies on the sensor due to signal-propagation-delays and semiconductor properties. Since the emitted and remitted signals are correlated directly on the sensor array, different latencies for every pixel have to be taken into account.
+
 ----------------------------------------------------
 ----------------------------------------------------
 ----------------------------------------------------
 4. Experiment
 ----------------------------------------------------
 
+
 (2) nolu makaleden: Bolum 4.1 In practice, we can discard these unreliable measurements from recorded data by enforcing a depth difference threshold around depth discontinuities.
+
+(3) nolu makaleden: The calibration approach is evaluated by the means of robustness, precision and validity. 50 shots are captured at 3 different exposure times (1000 μs, 1500 μs, 2000 μs, with different angles and distances to the plane. S consists of 149 parameters. Besides the extrinsic parameters, 8 splines are estimated for depth correction. The distances vary between 500 mm and 1500 mm. The real pose of the calibration plane is determined with a laser range scanner. The laser range scanner is more precise as a ToF-camera and therefore, assumed to provide the ground truth: (nc = [0.9982,−0.0588, 0.0023], dc = 1969.01mm). Since the ground truth is also estimated by the calibration step, it is only measured for verification purposes.
 
 
 ----------------------------------------------------
@@ -78,4 +90,4 @@ kaynaklar
 
 2. Design and Calibration of a Multi-view TOF Sensor Fusion System (Stanford)
 
-3. Extrinsics and Depth Calibration of ToF cameras
+3. Extrinsics and Depth Calibration of ToF cameras - Fuschs, Hirzinger
