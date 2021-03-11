@@ -204,3 +204,104 @@ Index Terms—Plane-fitting, Plane uncertainty estimation, 3D Mapping, Plane
 GENERALIZATION of traditional occupancy-grid 2D maps to three dimensions is hindered by the disproportionate increase in storage and computation requirements.
 
 Given a set of noisy points known or hypothized to lie on a plane, the “optimum” plane can be extracted from them using methods surveyed in [9]. The main methods are that of least-squares [5], [9] and renormalization.
+
+
+
+---------------------------------------------
+--------------------------------------------
+
+Makale 3
+
+Technical Foundation and Calibration Methods for Time-of-Flight Cameras
+
+Damien Lefloch1, Rahul Nair2,3, Frank Lenzen2,3, Henrik Schafer2,3, Lee
+Streeter4, Michael J. Cree4, Reinhard Koch5 and Andreas Kolb
+
+Technical Foundation and Calibration methods for TOF cams -- Leoch, Nair, Lenzen, Schafer, Koch
+
+makalesinden alıntılar: 
+
+ToF sensors usually provide two measurement frames at the same time from data acquired by the same pixel array; the depth and amplitude images. The amplitude image corresponds
+to the amount of returning active light signal and is also considered a strong indicator of quality/ reliability of measurements.
+
+Most of the ToF manufacturers built-in the following principle in their cameras such as pmdtechnologies 1, Mesa Imaging 2 or Soft Kinetic 3 (cf. Fig. 1). These cameras are able to retrieve 2:5D image at a frame rate of 30FPS; pmdtechnologies is currently working on faster device (such as the Camboard Nano) which operates at 90FPS. Note that common ToF 
+cameras usually use high modulation frequency range that make them suitable for near or middle range applications.
+
+
+The continuous modulation principle, also known as a continuous wave intensity modulation (CWIM) [21], is based on the correlation of the emitted signal o shifted by an oset 
+phase and the incident signal r resulting from the reection of the modulated active illumination (NIRlight) by the observed scene. CWIM is used to estimate the distance between 
+the target (i.e. observed objects) and the source of the active illumination (i.e. the camera). CWIM ToF sensors directly implement the correlation function on chip, composed of 
+what is known in the literature as smart pixels [21].
+
+21 lange'nin doktora tezi
+
+Both emitted and incident signal can be expressed as a cosinusoidal function
+
+It is understood that in this simple depth retrieval calculation from the phase shift, , simplications are made which leads to possible measurement errors, e.g the assumption 
+that the active illumination module and the ToF sensors are placed in the same position in space; which is physically impossible.
+
+
+Conversely, pulse modulation is an alternative tof principle which generates pulse of light of known dimension coupled with a fast shutter observation.
+Pulse modulation az kullanılıyor..
+
+Beside integration time, that directly influences the signal-to-noise ratio (SNR) of the measurement and consequently the variance of the measured distance, the user can in
+uenced the quality of the measurements made by setting the fm value to t the application. As stated by Lange [21], as fm increases the depth resolution increases but the non ambiguity range decreases.
+
+wiggling hatalarından bahsedilmeli
+systematic error
+Use of the correlation of the physical light source with the formulas 1.1 lead to a periodic "wiggling" error which causes the calculated depth to oscillate around the actual 
+
+depth. The actual form of this oscillation depends on the strength and frequencies of the higher order harmonics.
+
+
+There are two approaches for solving this problem. The rst approach is to sample the correlation more phase shifts and extend the formulas to incorporate higher order harmonics
+
+[8]. With current 2-tap sensor this approach induces more errors when observing dynamic scenes. The second approach which we will further discuss in 3.2 is to keep the formulas as they are and estimate the residual error between true and calculated depth [25, 38] . The residual can then be used in a calibration step to eliminate the error. Finally, [34] employ a phase modulation of the amplitude signal to attenuate the higher harmonics in the emitted amplitude.
+
+2.2 Intensity-related Distance Error
+In addition to the wiggling systematic error, the measured distance is greatly altered by an error dependent of the total amount of incident light recieved by the sensor. Measured distance of lower reflectivity objects appear closer to the camera (up to 3cm drift for the darkest objects). Fig. 3 highlights this error eect using a simple black-and-white checkerboard pattern. The described error is usually known as Intensity-related distance error and its cause is not fully understood yet [24].
+
+**Depth Inhomogeneity**
+An important type of errors in ToF imaging, the so-called flying pixels, occurs along depth inhomogeneities. To illustrate these errors, we consider a depth boundary with one 
+foreground and one background object. In the case that the solid angle extent of a sensor pixel falls on the boundary of the foreground and the background, the recorded signal is a mixture of the light returns from both areas
+
+**motion artifact hataları**
+Since these (pairs) of additional exposures have to be made sequentially, dynamic scenes lead to erroneous distance values at depth and reectivity boundaries.
+
+**Multiple Returns**
+Multipath interference can also occur intra-camera due to the light refraction and reection of an imaging lens and aperture [43, 3, 37]. The aperture eect is due to diraction 
+which leads to localised blurring in the image formation process. Fine detail beyond the limits in angular resolution is greatly reduced, causing sharp edges to blur.
+
+**Other error sources**
+The most important error source in the sensor is a result of the photon counting process in the sensor. Since photons are detected only by a certain probability, Poisson noise is introduced.
+
+The recorded light intensity in the raw channels is stemming from both active and background illumination. Isolating the active part of the signal reduces the SNR. Such a 
+reduction could be compensated by increasing the integration time, which on the other hand increases the risk of an over-saturation of the sensor cells, leading to false depth 
+estimation
+
+Due to these short-comings current ToF cameras have a resolution smaller than half VGA, which is rather small in comparison to standard RGB or grayscale cameras.
+
+**Depth Calibration**
+It should be noted here, that since the ToF camera measures the time of ight along the light path of course, error calibration should be done with respect to the radial distance as well, not in Cartesian coordinates. One of the rst contributions to this topic is [25] by Lindner and Kolb. They combined a pixelwise linear calibration with a global B-splines t. In [38] Schiller et. al. used a polynomial to model the distance deviation.
+
+** temperature vurgulanmalı"
+However, the calibration is only valid for the camera temperature it was recorded at, since the behavior changes with the temperature
+
+4 Post-Processing Data Correction
+additional errors are usually scene dependent (as dynamic environment), a last processing needs to be applied after the depth correction via calibration
+
+4.1 Depth Inhomogeneity and Denoising
+On methods applied to the 2D data we remark that median ltering is a simple and ecient means to for a rough correction of flying pixels, which are outside the objects' depth range
+
+4.2 Motion Compensation
+motion artifacts occur in dynamic scenes at depth and reectivity boundaries due to the sequential sampling of the correlation function. There are three (or arguably two)
+dierent approaches to reduce such artifacts. One way is by decreasing the number of frames obtained sequentially and needed to produce a valid depth reconstruction. Another
+approach commonly employed is composed of a detection step, where erroneous regions due to motion are found, followed by a correction step.
+
+4.3 Multiple Return Correction
+The determination of the multiple returns of multipath or mixed pixels essentially is the separation of complex phasors into two or more components.
+
+
+
+
+
