@@ -67,6 +67,10 @@ Due to nonlinearities of the semiconductor and in account of imperfect separatio
 
 The phase-delay originates partially from latencies on the sensor due to signal-propagation-delays and semiconductor properties. Since the emitted and remitted signals are correlated directly on the sensor array, different latencies for every pixel have to be taken into account.
 
+
+makale 4 'te error modelleri
+Systematic Distance Error, Intensity-related Distance Error, Depth Inhomogeneity, Motion Artifacts, Multiple Returns, Other Error Sources (Poisson Noise, dark noise etc.)
+
 ----------------------------------------------------
 ----------------------------------------------------
 ----------------------------------------------------
@@ -78,6 +82,9 @@ The phase-delay originates partially from latencies on the sensor due to signal-
 
 (3) nolu makaleden: The calibration approach is evaluated by the means of robustness, precision and validity. 50 shots are captured at 3 different exposure times (1000 μs, 1500 μs, 2000 μs, with different angles and distances to the plane. S consists of 149 parameters. Besides the extrinsic parameters, 8 splines are estimated for depth correction. The distances vary between 500 mm and 1500 mm. The real pose of the calibration plane is determined with a laser range scanner. The laser range scanner is more precise as a ToF-camera and therefore, assumed to provide the ground truth: (nc = [0.9982,−0.0588, 0.0023], dc = 1969.01mm). Since the ground truth is also estimated by the calibration step, it is only measured for verification purposes.
 
+temperature'dan bahsedilmeli.
+
+calibration ile duzelmeyen seyler, post correction ile duzeltilebilir. makale 4 'te bahsedilmiş
 
 ----------------------------------------------------
 ----------------------------------------------------
@@ -91,3 +98,6 @@ kaynaklar
 2. Design and Calibration of a Multi-view TOF Sensor Fusion System (Stanford)
 
 3. Extrinsics and Depth Calibration of ToF cameras - Fuschs, Hirzinger
+
+4. Technical Foundation and Calibration Methods for Time-of-Flight Cameras -Leoch, Nair, Lenzen, Schafer, Koch
+
